@@ -53,3 +53,13 @@ h2 {
 .answerbox:active {
     background-color: rgb(193, 223, 235);
 }
+
+.wrong-answer {
+    background-color: rgb(230, 215, 215);
+    border: 2px solid rgb(243, 181, 181);
+}
+
+.right-answer {
+    background-color: rgb(194, 253, 179);
+    border: 2px solid rgb(153, 248, 141);
+}
