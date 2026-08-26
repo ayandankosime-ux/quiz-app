@@ -63,3 +63,30 @@ h2 {
     background-color: rgb(194, 253, 179);
     border: 2px solid rgb(153, 248, 141);
 }
+
+.score-board {
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+}
+
+.start-btn {
+    padding: 10px;
+    width: 90px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    background-color: aqua;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color 0.15 opacity 0.15;
+}
+
+.start-btn:hover {
+    background-color: rgb(1, 209, 209);
+}
+
+.start-btn:active {
+    opacity: 0.5;
+}

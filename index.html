@@ -10,25 +10,10 @@
     <h1>Programmer <span style="color: lightseagreen
     ">Quiz</span></h1>
     <div class="main-container">
-        <div class="question-container">
-            <h2>Which keyword is used to declare a variable that cannot be reassigned?</h2>
-        </div>
-        <div class="answer-container">
-            <div class="answerbox js-answerbox  box-a" onclick="verifyAnswer('var')">
-                <p>var</p>
-            </div>
-            <div class="answerbox js-answerbox box-b" onclick="verifyAnswer('let')">
-                <p>let</p>
-            </div>
-            <div class="answerbox js-answerbox  box-c" onclick="verifyAnswer('const')">
-                <p>const</p>
-            </div>
-            <div class="answerbox js-answerbox  box-d" onclick="verifyAnswer('define')">
-                <p>define</p>
-            </div>
-        </div>
+        <button class="start-btn" onclick="generateHTML()">Start</button>
     </div>
     
+    <script src="data/quiz.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
