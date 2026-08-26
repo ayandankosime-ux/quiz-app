@@ -90,3 +90,25 @@ h2 {
 .start-btn:active {
     opacity: 0.5;
 }
+
+.continue-btn {
+    padding: 10px;
+    width: 90px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(74, 255, 74);
+    margin: auto;
+    cursor: pointer;
+    transition: background-color 0.15 opacity 0.15;
+    margin-top: 12px;
+}
+
+.continue-btn:hover {
+    background-color: rgb(67, 209, 62);
+}
+
+.continue-btn:active {
+    opacity: 0.5;
+}

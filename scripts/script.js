@@ -1,5 +1,46 @@
 const answerBox = document.querySelector('.js-answerbox');
 
+    let currentIndex = 0;
+
+function generateHTML() {
+    let html =
+    `
+    <p class="score-board">Questions 1/9</p>
+    <div class="question-container">
+        <h2>${quiz[currentIndex].question}</h2>
+    </div>
+    <div class="answer-container">
+        <div class="answerbox js-answerbox  box-a" onclick="verifyAnswer('var')">
+            <p>${quiz[currentIndex].options[0]}</p>
+        </div>
+        <div class="answerbox js-answerbox box-b" onclick="verifyAnswer('let')">
+            <p>${quiz[currentIndex].options[1]}</p>
+        </div>
+        <div class="answerbox js-answerbox  box-c" onclick="verifyAnswer('const')">
+            <p>${quiz[currentIndex].options[2]}</p>
+        </div>
+        <div class="answerbox js-answerbox  box-d" onclick="verifyAnswer('define')">
+            <p>${quiz[currentIndex].options[3]}</p>
+        </div>
+    </div>
+    <button class="continue-btn js-continue-btn">Continue</button>
+    `;
+
+    document.querySelector('.main-container').innerHTML = html;
+    nextQuestion();
+
+};
+
+function nextQuestion() {
+    const continueBtn = document.querySelector('.js-continue-btn');
+
+    continueBtn.addEventListener('click', () => {
+        console.log('button works');
+        currentIndex += 1;
+
+    });
+}
+
 function verifyAnswer(answer) {
     const correctAnswer = 'const';
 
@@ -16,30 +57,3 @@ function verifyAnswer(answer) {
 
     }
 };
-
-function generateHTML() {
-    let html =
-    `
-    <p class="score-board">Questions 1/9</p>
-    <div class="question-container">
-        <h2>${quiz[0].question}</h2>
-    </div>
-    <div class="answer-container">
-        <div class="answerbox js-answerbox  box-a" onclick="verifyAnswer('var')">
-            <p>${quiz[0].options[0]}</p>
-        </div>
-        <div class="answerbox js-answerbox box-b" onclick="verifyAnswer('let')">
-            <p>${quiz[0].options[1]}</p>
-        </div>
-        <div class="answerbox js-answerbox  box-c" onclick="verifyAnswer('const')">
-            <p>${quiz[0].options[2]}</p>
-        </div>
-        <div class="answerbox js-answerbox  box-d" onclick="verifyAnswer('define')">
-            <p>${quiz[0].options[3]}</p>
-        </div>
-    </div>
-    `;
-
-    document.querySelector('.main-container').innerHTML = html;
-}
-
